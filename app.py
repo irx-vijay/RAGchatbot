@@ -22,7 +22,7 @@ st.title("⚡ GROQ-powered RAG Chatbot")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Your AI assistant"}]
 
-SYSTEM_PROMPT = "You are a helpful AI assistant."
+SYSTEM_PROMPT = "You are a helpful AI assistant, less complex outputs."
 
 @st.cache_resource
 def build_vector_store(uploaded_files):
