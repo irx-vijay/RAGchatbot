@@ -6,3 +6,9 @@ langchain-community
 faiss-cpu
 python-dotenv
 sentence-transformers
+bleach
+langchain-text-splitters
+pypdf
+psycopg2-binary
+supabase
+docx2txt
