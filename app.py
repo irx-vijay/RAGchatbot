@@ -22,7 +22,18 @@ st.title("⚡ GROQ-powered RAG Chatbot")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Your AI assistant"}]
 
-SYSTEM_PROMPT = "You are a helpful AI assistant, less complex outputs."
+SYSTEM_PROMPT_CHAT = (
+    "You are a knowledgeable, concise AI assistant. "
+    "Answer clearly and honestly. If you don't know, say so."
+)
+
+SYSTEM_PROMPT_RAG = """You are a document analysis assistant with ONE strict rule:
+ONLY answer using information explicitly present in the context.
+- If the answer is NOT in the context, say exactly:
+  "I couldn't find that in the uploaded documents."
+- Always mention the source filename.
+- Never use outside knowledge.
+"""
 
 @st.cache_resource
 def build_vector_store(uploaded_files):
