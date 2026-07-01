@@ -30,3 +30,7 @@ streamlit run app.py
 ```
 
 ## Environment Variables
+GROQ_API_KEY =
+SUPABASE_URL =
+SUPABASE_KEY = 
+DATABASE_URL = 
